@@ -1,0 +1,75 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 28978360299,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginStepDefinitions.beforeRun()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "User should be able to book parking",
+        "description": "",
+        "id": "book-parking-and-save-feature-validation;user-should-be-able-to-book-parking",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 10155966131,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "user is on dfwAirport website",
+            "match": {
+              "location": "LoginStepDefinitions.user_is_on_dfwAirport_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 69632702,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "user clicks park",
+            "match": {
+              "location": "LoginStepDefinitions.user_clicks_park()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 5895027286,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "user should see book and save parking form",
+            "match": {
+              "location": "LoginStepDefinitions.user_should_see_book_and_save_parking_form()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 3,
+            "name": "@tag1"
+          }
+        ]
+      }
+    ],
+    "name": "Book parking and save feature validation",
+    "description": "",
+    "id": "book-parking-and-save-feature-validation",
+    "keyword": "Feature",
+    "uri": "features/BookParking.feature"
+  }
+]
