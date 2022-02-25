@@ -5,7 +5,7 @@ Scenario: User should be able to book parking
 Given user is on dfwAirport website   
 When user clicks park 
 Then user should see book and save parking form 
-#And user clicks on signin button 
+And user scrolls up and down 
 #Then user should land on Dashboard page
 
 #Examples: 
