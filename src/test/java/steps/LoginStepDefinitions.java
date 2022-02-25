@@ -27,23 +27,29 @@ public class LoginStepDefinitions extends TestBase {
 	
 
 	@Given("^user is on dfwAirport website$")
-	public void  user_is_on_dfwAirport_website() {
+	public void  user_is_on_dfwAirport_website() throws InterruptedException {
 	 driver.get("https://www.dfwairport.com/");
 	dfwHomepage.acceptCookies();
 	}
 
 	@When("^user clicks park$") 
-	public void user_clicks_park() {
+	public void user_clicks_park() throws InterruptedException {
 		dfwHomepage.navigateToParkButton();
 	}
 	
 	@Then("^user should see book and save parking form$")
 	public void user_should_see_book_and_save_parking_form() throws IOException{
-		//String expectedTitle = "DFW International Airport | Parking";
-		dfwHomepage.getPageTitle();
-		//Assert.assertEquals(expectedTitle, actualTitle);
+		String actualTitle = dfwHomepage.getPageTitle();
+		String expectedTitle = "DFW International Airport | Parking";
+		System.out.println(actualTitle);
+		Assert.assertEquals(expectedTitle, actualTitle);
 		takeScreenshot();
 	} 
+	
+	@And("^user scrolls up and down$")
+	public void user_scrolls_up_and_down() {
+		dfwHomepage.checkBottomInfo();
+	}
 	
 	@When("^user enters username as $")
 	public void user_enters_username_as() throws Throwable {
