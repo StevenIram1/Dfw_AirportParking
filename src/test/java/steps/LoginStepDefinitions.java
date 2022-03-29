@@ -13,9 +13,9 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import pages.DfwHomePage;
-import pages.TestBase;
+import pages.TestBase; 
 
-public class LoginStepDefinitions extends TestBase {
+public class LoginStepDefinitions extends TestBase{
 	
 	DfwHomePage dfwHomepage;
 	
@@ -27,9 +27,9 @@ public class LoginStepDefinitions extends TestBase {
 	
 
 	@Given("^user is on dfwAirport website$")
-	public void  user_is_on_dfwAirport_website() throws InterruptedException {
+	public void  user_is_on_dfwAirport_website() {
 	 driver.get("https://www.dfwairport.com/");
-	dfwHomepage.acceptCookies();
+	 dfwHomepage.acceptCookies();
 	}
 
 	@When("^user clicks park$") 
@@ -72,7 +72,7 @@ public class LoginStepDefinitions extends TestBase {
 		
 	}
 	
-	//@After
+	@After
 	public void afterRun() {
 	tearDown();
 	}
